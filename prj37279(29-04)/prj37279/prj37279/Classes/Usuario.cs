@@ -61,16 +61,19 @@ public class Usuario: Banco
 
         #region Logar
             public string Logar(){
-                MySqlDataReader dados =  Consultar($"select * from usuario where nm_login= '{Login}'");
+                
+                MySqlDataReader dados =  Consultar($"select nm_usuario from usuario where nm_login= '{Login}' and nm_senha='{Senha}'");
                 if (dados.Read())
                 {
-                    if (this.Senha == dados.GetString("nm_senha"))
-                            throw new Exception("Login realizado com sucesso");
-                    else
-                        throw new Exception("Senha incorreta");
+                    string nome = dados.GetString("nm_usuario");
+                    if (!dados.IsClosed)
+                        dados.Close();
+                    Desconectar();
+                    return nome;
                 }
                 else
                     throw new Exception("Login incorreto");
+                        
             }
 
             //public void Logar(string login, string senha){

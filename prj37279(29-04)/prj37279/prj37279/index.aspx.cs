@@ -26,7 +26,7 @@ namespace ProjetoTeste
             try
             {
                 Usuario UsuarioLoginSenha = new Usuario(txtLogin.Text, txtSenha.Text);
-                UsuarioLoginSenha.Logar();      
+                resposta = UsuarioLoginSenha.Logar();      
             }
             catch(Exception erro)
             {

@@ -1,0 +1,162 @@
+@font-face { 
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+* {
+    font-family: 'Poppins';
+    font-size: 18px;
+}
+
+body {
+    margin:0;
+}
+
+main { 
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 
+{
+    font-size: 1.7rem;
+}
+
+.botao
+{
+    background-color: #7f3ebb;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 7px;
+    cursor: pointer;
+    display: flex;
+    gap:5px;
+    align-items: center;
+    width: fit-content;
+}
+
+.aviso
+{
+    font-weight: normal;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #f7edff;
+    text-align: center;
+    border-radius: 7px;
+}
+
+#tabela
+{
+    width: 100%;
+    border: thin solid #7f3ebb;
+}
+
+#tabela th {
+    background-color: #7f3ebb;
+    font-weight: normal;
+    color: #fff;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#tabela th.colunaCodigo{
+    width: 100px;
+}
+
+#tabela th.colunaAcoes{
+    width: 100px;
+}
+
+#tabela td {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#tabela td.acoes {
+    text-align: center;
+}
+
+#tabela td.acoes > a {
+    color: #7f3ebb;
+    text-decoration: none;
+}
+
+#tabela > tbody tr:nth-child(even)
+{
+    background-color: #f7edff;
+}
+
+/* NOVO */
+
+.areaFormulario
+{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    border: thin solid #7f3ebb;
+    border-radius: 7px;
+}
+
+.areaFormulario p 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.areaFormulario input, label 
+{ 
+    width: 100%;
+}
+
+.areaFormulario input:disabled
+{
+    background-color: #f7edff;
+}
+
+.areaFormulario label
+{
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.areaFormulario input
+{
+    border: thin solid #7f3ebb;
+    border-radius: 7px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.areaFormulario button
+{
+    border: none;
+}
+
+.rodape
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.aviso.erro 
+{ 
+    background-color: #fdcccc; 
+    font-size: 1rem;
+    padding: 10px 20px;
+}
+
+.aviso.sucesso 
+{ 
+    background-color: #cdfdcc;
+    font-size: 1rem;
+    padding: 10px 20px;
+}
